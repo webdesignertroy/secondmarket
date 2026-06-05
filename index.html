@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Second Market — ToolVault</title>
+<meta name="description" content="Second Market publishes mobile apps, including ToolVault, a photo-first garage tool inventory app with AI identification." />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Second Market home">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+      </span>
+      Second Market
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="lnk" href="#about">About</a>
+      <a class="lnk" href="#toolvault">ToolVault</a>
+      <a class="lnk" href="#waitlist">Waitlist</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn-ghost" href="#toolvault">Learn more</a>
+      <a class="btn btn-primary" href="#waitlist">Join waitlist</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <span class="eyebrow" data-reveal><span class="ed"></span>Mobile apps from Second Market</span>
+      <h1 data-reveal>Never buy something you <span class="hl">already own</span> again.</h1>
+      <p class="lead hero__sub" data-reveal>ToolVault is a photo-first garage tool inventory with AI identification. Catalog what you own, find it in seconds, and stop buying duplicates.</p>
+      <div class="hero__actions" data-reveal>
+        <a class="btn btn-primary" href="#waitlist">Join the waitlist
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#toolvault">See how it works</a>
+      </div>
+      <div class="hero__store" data-reveal>
+        <span class="pill">App Store</span>
+        <span>Coming soon — early access opening to waitlist first.</span>
+      </div>
+    </div>
+
+    <div class="hero__visual" data-reveal>
+      <div class="parallax" id="heroVisual">
+        <div class="browser" data-depth="6">
+          <div class="browser__bar">
+            <div class="browser__dots"><i></i><i></i><i></i></div>
+            <div class="browser__url">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              toolvault.app
+            </div>
+          </div>
+          <img class="browser__screen" src="assets/toolvault-app.png" alt="ToolVault inventory app showing a catalogued tool kit, #008" />
+        </div>
+
+        <div class="ai-card" data-depth="22">
+          <div class="ai-card__top">
+            <span class="ai-dot"></span>
+            <span class="ai-label">TOOLVAULT · AI ID</span>
+            <span class="ai-live">LIVE</span>
+          </div>
+          <div class="ai-scan">
+            <div class="grid-bg"></div>
+            <div class="scan-line"></div>
+            <span class="tool-ic" id="toolIc"></span>
+          </div>
+          <div class="ai-result">
+            <span class="ai-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg>
+              Identified
+            </span>
+            <div class="ai-fade" id="aiFade">
+              <div class="ai-name" id="aiName">18V Drill</div>
+              <div class="ai-meta" id="aiMeta">Cordless · Garage wall · DeWalt · 2 owned</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__chip" data-depth="14">
+          <span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          </span>
+          <div>
+            <div class="t">Fast search</div>
+            <div class="s">1–3 of 3 tools</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap strip__in">
+    <span class="label">Built around how tools really live</span>
+    <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M8 5l1.5-2h5L16 5"/></svg>Photo inventory</span>
+    <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 4 4 .6-3 3 .7 4.4L12 17l-3.4 2 .7-4.4-3-3 4-.6z"/></svg>AI identification</span>
+    <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Fast search</span>
+    <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9 18l-5-5"/></svg>Avoid duplicates</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about__top">
+      <div class="shead" data-reveal>
+        <span class="eyebrow"><span class="ed"></span>About Second Market</span>
+        <h2>Useful mobile software for the things people actually manage.</h2>
+      </div>
+      <p class="about__claim" data-reveal>Second Market LLC publishes <strong>focused mobile apps</strong> that turn everyday ownership, buying, and home organization into simple digital workflows. Our first product helps people catalog garage tools with photos, AI identification, and searchable context — so every purchase decision starts with <strong>what they already have</strong>.</p>
+    </div>
+
+    <div class="statrow" data-reveal>
+      <div class="stat"><div class="v">01</div><div class="k">First product in active development</div></div>
+      <div class="stat"><div class="v">AI</div><div class="k">Identification-first capture workflow</div></div>
+      <div class="stat"><div class="v" style="height:30px;display:flex;align-items:center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2.2"/><circle cx="12" cy="13" r="3.4"/><path d="M8 6l1.4-2h5.2L16 6"/></svg></div><div class="k">Photo-first, built for real garages</div></div>
+    </div>
+
+    <div class="subhead" data-reveal><h3>ToolVault snapshot</h3><span class="rule"></span></div>
+    <div class="tiles">
+      <div class="tile" data-reveal>
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/><path d="M8 6l1.4-2h5.2L16 6"/></svg></div>
+        <h4>Photo inventory</h4>
+        <p>Every tool added as an image first, the way it sits in your garage.</p>
+      </div>
+      <div class="tile" data-reveal>
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.3 4.8.7-3.5 3.4.8 4.8L12 18l-4.1 2.2.8-4.8L5.2 12l4.8-.7z"/></svg></div>
+        <h4>AI identification</h4>
+        <p>The app suggests what a tool is; you confirm and it's catalogued.</p>
+      </div>
+      <div class="tile" data-reveal>
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h4>Fast search</h4>
+        <p>Searchable context means the right tool surfaces in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLVAULT FEATURES -->
+<section class="sec soft" id="toolvault">
+  <div class="wrap">
+    <div class="shead" data-reveal>
+      <span class="eyebrow"><span class="ed"></span>First product — ToolVault</span>
+      <h2>A garage inventory that pays for itself the first time you don't re-buy.</h2>
+      <p class="lead">Photo-first inventory built around the way tools live in real garages — capture, organize, identify, and check before you buy.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat" data-reveal>
+        <span class="feat__num">01</span>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8 6l1.4-2h5.2L16 6"/></svg></div>
+        <h4>Capture by photo</h4>
+        <p>Add tools visually instead of typing long item details from memory. Snap it, and ToolVault does the rest.</p>
+      </div>
+      <div class="feat" data-reveal>
+        <span class="feat__num">02</span>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.3 4.8.7-3.5 3.4.8 4.8L12 18l-4.1 2.2.8-4.8L5.2 12l4.8-.7z"/></svg></div>
+        <h4>AI identification</h4>
+        <p>Let the app suggest what a tool is, then confirm and save it — no manual catalog numbers required.</p>
+      </div>
+      <div class="feat" data-reveal>
+        <span class="feat__num">03</span>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 7l2-3h6l1.5 3"/><path d="M8 13h8"/></svg></div>
+        <h4>Organize storage</h4>
+        <p>Track where each tool lives, from wall racks to toolboxes and bins, so nothing goes missing again.</p>
+      </div>
+      <div class="feat" data-reveal>
+        <span class="feat__num">04</span>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h9a1 1 0 0 1 1 1v11"/><rect x="5" y="8" width="11" height="12" rx="1.5"/><path d="M8 14l2 2 4-4"/></svg></div>
+        <h4>Avoid duplicates</h4>
+        <p>Check your inventory before a hardware-store run or online order — and keep your money for the tools you're missing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="sec" id="waitlist" style="padding-top:clamp(64px,8vw,96px);">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <div class="cta__glow"></div>
+      <div class="cta__in">
+        <span class="badge"><span class="d"></span>App Store · Coming soon</span>
+        <h2>Get on the ToolVault waitlist.</h2>
+        <p>Be first to hear when ToolVault is ready for early users, plus App Store launch updates. No spam — just the launch.</p>
+
+        <form class="wl-form" id="wlForm" novalidate>
+          <div class="wl-field">
+            <input class="wl-input" id="wlEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" aria-label="Email address" />
+            <div class="wl-msg" id="wlMsg" role="status" aria-live="polite"></div>
+          </div>
+          <button class="wl-btn" type="submit">
+            Join Waitlist
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </button>
+        </form>
+        <div class="wl-note">We'll only email you about ToolVault early access and launch.</div>
+
+        <div class="wl-success" id="wlSuccess">
+          <div class="sc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></div>
+          <div>
+            <div class="st">You're on the list.</div>
+            <div class="ss" id="wlSuccessSub">We'll reach out at launch.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <a class="brand" href="#top">
+        <span class="mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+        </span>
+        Second Market
+      </a>
+      <p>Useful mobile software for the things people actually manage. Our first product is ToolVault.</p>
+    </div>
+    <div class="foot__links">
+      <div class="foot__col">
+        <h5>Product</h5>
+        <a href="#about">About</a>
+        <a href="#toolvault">ToolVault</a>
+        <a href="#waitlist">Waitlist</a>
+      </div>
+      <div class="foot__col">
+        <h5>ToolVault</h5>
+        <a href="#toolvault">Capture by photo</a>
+        <a href="#toolvault">AI identification</a>
+        <a href="#toolvault">Avoid duplicates</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot__bottom">
+    <span>© 2026 Second Market LLC. All rights reserved.</span>
+    <span>ToolVault — coming soon to the App Store.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* sticky nav shadow */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 8); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* scroll reveals */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  function revealNow(el){
+    if(el.classList.contains('in')) return;
+    var sibs = Array.prototype.slice.call(el.parentNode.querySelectorAll(':scope > [data-reveal]'));
+    var i = sibs.indexOf(el);
+    el.style.transitionDelay = (Math.max(0,i)*70) + 'ms';
+    el.classList.add('in');
+  }
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ revealNow(e.target); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.12});
+    revealEls.forEach(function(el){ io.observe(el); });
+    /* immediate pass for anything already in view (covers slow/queued IO) */
+    requestAnimationFrame(function(){
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      revealEls.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if(r.top < vh*0.92 && r.bottom > 0){ revealNow(el); io.unobserve(el); }
+      });
+    });
+    /* failsafe: never leave content hidden (snaps visible without a transition
+       so it works even in throttled/non-painting contexts) */
+    setTimeout(function(){
+      revealEls.forEach(revealNow);
+      document.documentElement.classList.add('reveal-done');
+    }, 1500);
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* hero parallax */
+  var visual = document.getElementById('heroVisual');
+  var hero = document.querySelector('.hero');
+  if(visual && hero && !reduce && window.matchMedia('(pointer:fine)').matches){
+    var tx=0,ty=0,cx=0,cy=0,raf=null;
+    var layers = visual.querySelectorAll('[data-depth]');
+    hero.addEventListener('mousemove', function(ev){
+      var r = hero.getBoundingClientRect();
+      tx = ((ev.clientX - r.left)/r.width - .5);
+      ty = ((ev.clientY - r.top)/r.height - .5);
+      if(!raf) raf = requestAnimationFrame(tick);
+    });
+    hero.addEventListener('mouseleave', function(){ tx=0;ty=0; if(!raf) raf=requestAnimationFrame(tick); });
+    function tick(){
+      cx += (tx-cx)*0.08; cy += (ty-cy)*0.08;
+      layers.forEach(function(l){
+        var d = parseFloat(l.getAttribute('data-depth'))||0;
+        l.style.transform = 'translate3d('+(-cx*d)+'px,'+(-cy*d)+'px,0)';
+      });
+      if(Math.abs(tx-cx)>0.001 || Math.abs(ty-cy)>0.001){ raf=requestAnimationFrame(tick); } else { raf=null; }
+    }
+  }
+
+  /* AI identification demo */
+  var tools = [
+    {name:'18V Drill', meta:'Cordless · Garage wall · DeWalt · 2 owned', icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h7v5H5a2 2 0 0 1-2-2z"/><path d="M10 10h5l3-2v6l-3-2h-5"/><path d="M6 14v4h3v-2"/></svg>'},
+    {name:'Socket Set', meta:'Tool chest · Metric · 1 set', icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M12 7.5 14.6 9v3L12 13.5 9.4 12V9z"/></svg>'},
+    {name:'Claw Hammer', meta:'Pegboard · 16oz · 1 owned', icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8c2-2 5-2 7 0l-1.5 1.5L8 8"/><path d="m10 10 8 9a1.5 1.5 0 0 0 2-2l-8-8"/></svg>'},
+    {name:'Slip-Joint Pliers', meta:'Tool case #008 · 1 owned', icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 7 9l3 3-3 9"/><path d="m15 3 2 6-3 3 3 9"/></svg>'}
+  ];
+  var idx = 0;
+  var aiFade = document.getElementById('aiFade');
+  var aiName = document.getElementById('aiName');
+  var aiMeta = document.getElementById('aiMeta');
+  var toolIc = document.getElementById('toolIc');
+  if(toolIc) toolIc.innerHTML = tools[0].icon;
+  if(aiName && !reduce){
+    setInterval(function(){
+      aiFade.classList.add('swap');
+      if(toolIc) toolIc.style.opacity = '0';
+      setTimeout(function(){
+        idx = (idx+1) % tools.length;
+        aiName.textContent = tools[idx].name;
+        aiMeta.textContent = tools[idx].meta;
+        if(toolIc){ toolIc.innerHTML = tools[idx].icon; toolIc.style.opacity = '1'; }
+        aiFade.classList.remove('swap');
+      }, 360);
+    }, 3000);
+  }
+
+  /* waitlist form */
+  var form = document.getElementById('wlForm');
+  var email = document.getElementById('wlEmail');
+  var msg = document.getElementById('wlMsg');
+  var success = document.getElementById('wlSuccess');
+  var successSub = document.getElementById('wlSuccessSub');
+  var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var val = email.value.trim();
+    if(val === ''){
+      email.classList.add('invalid'); msg.textContent = 'Please enter your email address.'; email.focus(); return;
+    }
+    if(!re.test(val)){
+      email.classList.add('invalid'); msg.textContent = 'That doesn\u2019t look like a valid email — mind checking it?'; email.focus(); return;
+    }
+    email.classList.remove('invalid'); msg.textContent = '';
+    form.style.display = 'none';
+    document.querySelector('.wl-note').style.display = 'none';
+    successSub.textContent = 'We\u2019ll email ' + val + ' at launch.';
+    success.classList.add('show');
+  });
+  email.addEventListener('input', function(){
+    if(email.classList.contains('invalid') && re.test(email.value.trim())){
+      email.classList.remove('invalid'); msg.textContent='';
+    }
+  });
+})();
+</script>
+</body>
+</html>

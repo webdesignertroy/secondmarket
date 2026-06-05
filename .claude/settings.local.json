@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l \"/Users/savarowtham/Downloads/Second Market.zip\")",
+      "Bash(unzip -o \"/Users/savarowtham/Downloads/Second Market.zip\" -d \"/Users/savarowtham/projects/secondmarket\")"
+    ]
+  }
+}
